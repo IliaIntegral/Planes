@@ -15,34 +15,34 @@ Airports where_we_go(float currently_lat, float currently_lon, Planes plane) {
     }
     //список аэропортов куда можно лететь пополнен осталось выбрать куда хотим лететь
     for (int i = 0; i < airports_where_we_can_go.size(); i++) {
-        cout << airports_where_we_can_go[i].city << '\n';
+        cout << i << " = " << airports_where_we_can_go[i].city << '\n';
     }
-    Airports destination_airport();
-    cin >> destination_airport;
-    return destination_airport;
+    int number;
+    cin >> number;
+    return airports_where_we_can_go[number];
 }
 vector<Airports> algo_reserve_airports(float x1, float y1, float x2, float y2) {
     vector<Airports> reserve_airports;
     int i = 0;
     bool f1 = 0, f2 = 0, f3 = 0;
-    while(reserve_airports.size() < 3) {
+    while(i < data_base_airports.size() && reserve_airports.size() < 3) {
         float x = data_base_airports[i].latitude;
         float y = data_base_airports[i].longitude;
-        if (!f1 && x1 < x && x < (x2 - x2)/3 && ) {
+        if (!f1 && x1 < x && x < (x2 - x2)/3 && (x - x1)(y2 - y1)/(x2 - x1) + y1 - 500 < y && y < (x - x1)(y2 - y1)/(x2 - x1) + y1 + 500) {
             reserve_airports.push_back(data_base_airports[i]);
             f1 = 1;
             i++;
-        } else if (!f2 && (x2 - x2)/3 < x && x < 2*(x2 - x2)/3 && ) {
+        } else if (!f2 && (x2 - x2)/3 < x && x < 2*(x2 - x2)/3 && (x - x1)(y2 - y1)/(x2 - x1) + y1 - 500 < y && y < (x - x1)(y2 - y1)/(x2 - x1) + y1 + 500) {
             reserve_airports.push_back(data_base_airports[i]);
             f2 = 1;
             i++;
-        } else if (!f3 && 2*(x2 - x2)/3 < x && x < x2 && ) {
+        } else if (!f3 && 2*(x2 - x2)/3 < x && x < x2 && (x - x1)(y2 - y1)/(x2 - x1) + y1 - 500 < y && y < (x - x1)(y2 - y1)/(x2 - x1) + y1 + 500) {
             reserve_airports.push_back(data_base_airports[i]);
             f3 = 1;
             i++;
         } else
             i++;
-    }
+    }/
     return reserve_airports;
 }
 /*

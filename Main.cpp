@@ -17,6 +17,7 @@ int main() {
     destination_airport = where_we_go(vnukovo.latitude, vnukovo.longitude, first);
     vector<Airports> reserve_airports;  // запасные аэропорты
     reserve_airports = algo_reserve_airports(vnukovo.latitude, vnukovo.longitude, destination_airport.latitude, destination_airport.longitude);
+    float distance = haversine()
 //запускается процедура полета в каждый момент времени известны координаты
     while (currently_lat != destination_airport.latitude && currently_lon != destination_airport.longitude) {
         if (currently_weather_in_destination != 0) {
